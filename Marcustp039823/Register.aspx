@@ -15,17 +15,25 @@
                             <p>Please fill out the fields below to create your account. Your email address and information will NOT be sold or shared with any 3rd party. If you already have an account, please, <a href="Login.aspx">click here</a>.</p>
                         </div>
                         <div class="signUpForm">
-                            <form action="#">
+                            <form method="post" action="Register.aspx?register=true">
                                 <div class="formSection">
                                     <h3>Contact Information</h3>
                                     <div class="row">
-                                        <div class="form-group col-sm-6 col-xs-12">
-                                            <label for="firstName" class="control-label">Name</label>
-                                            <input type="text" class="form-control" id="firstName">
+                                        <div class="form-group col-xs-12">
+                                            <label for="name" class="control-label">Name</label>
+                                            <input type="text" class="form-control" name="name" id="name" required>
                                         </div>
                                         <div class="form-group col-xs-12">
-                                            <label for="emailAdress" class="control-label">Email Address*</label>
-                                            <input type="email" class="form-control" id="emailAdress">
+                                            <label for="comname" class="control-label">Company Name*</label>
+                                            <input type="text" class="form-control" name="comname" id="comname" required>
+                                        </div>
+                                        <div class="form-group col-xs-12">
+                                            <label for="contact" class="control-label">Contact*</label>
+                                            <input type="text" class="form-control" name="contact" id="contact" required>
+                                        </div>
+                                        <div class="form-group col-xs-12">
+                                            <label for="pic" class="control-label">Person In Charge*</label>
+                                            <input type="text" class="form-control" name="pic" id="pic" required>
                                         </div>
                                     </div>
                                 </div>
@@ -33,16 +41,12 @@
                                     <h3>Account Information</h3>
                                     <div class="row">
                                         <div class="form-group col-xs-12">
-                                            <label for="usernames" class="control-label">Username*</label>
-                                            <input type="text" class="form-control" id="usernames">
+                                            <label for="email" class="control-label">Email*</label>
+                                            <input type="email" class="form-control" name="email" id="email" required>
                                         </div>
                                         <div class="form-group col-sm-6 col-xs-12">
-                                            <label for="passwordFirst" class="control-label">Password*</label>
-                                            <input type="password" class="form-control" id="password">
-                                        </div>
-                                        <div class="form-group col-sm-6 col-xs-12">
-                                            <label for="passwordAgain" class="control-label">Password (re-type)*</label>
-                                            <input type="password" class="form-control" id="passwordAgain">
+                                            <label for="password" class="control-label">Password*</label>
+                                            <input type="password" class="form-control" name="password" id="password" required>
                                         </div>
                                     </div>
                                 </div>
@@ -50,13 +54,9 @@
                                     <h3>Security Control</h3>
                                     <div class="row">
                                         <div class="form-group col-xs-12">
-                                            <label for="usernames" class="control-label">Confirm that you are human*</label>
-                                            <img src="img/business/recaptcha.jpg" alt="Image captcha" class="img-responsive img-rtl">
-                                        </div>
-                                        <div class="form-group col-xs-12">
                                             <div class="checkbox">
                                                 <label>
-                                                    <input type="checkbox">
+                                                    <input type="checkbox" required>
                                                     I agree to the <a href="terms-of-services.html">Terms of Use</a> & <a href="#">Privacy Policy</a>. Your business listing is fully backed by our 100% money back guarantee.
                                                 </label>
                                             </div>

@@ -14,8 +14,8 @@
 					<div class="panel-body">
 						<form class="loginForm" method="post" action="Login.aspx?login=true">
 							<div class="form-group">
-								<label for="userName">Email *</label>
-								<input type="text" name="password" class="form-control" id="userName">
+								<label for="email">Email *</label>
+								<input type="email" name="email" class="form-control" id="email">
 								<p class="help-block">Enter your Email</p>
 							</div>
 							<div class="form-group">

@@ -13,7 +13,7 @@ namespace Marcustp039823
         {
             SqlConnection conn = null;
 
-            conn = new SqlConnection(@"Data Source=ddacmustofadbserver.database.windows.net;Initial Catalog=DDACMUSTOFA_db;User ID=Cakasuma;Password=P@$$w0rd15951");
+            conn = new SqlConnection(@"Data Source=marcustp03982320180723064342dbserver.database.windows.net;Initial Catalog=Marcustp039823_db;Persist Security Info=True;User ID=Marcus;Password=P@$$w0rd15951");
             return conn;
         }
 
