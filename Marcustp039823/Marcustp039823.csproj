@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="Cust_Add_Shipping.aspx" />
     <Content Include="Cust_Home.aspx" />
+    <Content Include="Cust_View_Shipping.aspx" />
     <Content Include="Forgot_Password.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
@@ -252,7 +253,6 @@
     <Content Include="Register.aspx" />
     <Content Include="Staff_Edit_Shipping.aspx" />
     <Content Include="Staff_Home.aspx" />
-    <Content Include="View_Shipping.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -269,6 +269,13 @@
     </Compile>
     <Compile Include="Cust_Home.aspx.designer.cs">
       <DependentUpon>Cust_Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cust_View_Shipping.aspx.cs">
+      <DependentUpon>Cust_View_Shipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cust_View_Shipping.aspx.designer.cs">
+      <DependentUpon>Cust_View_Shipping.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -334,13 +341,6 @@
     </Compile>
     <Compile Include="Staff_Home.aspx.designer.cs">
       <DependentUpon>Staff_Home.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="View_Shipping.aspx.cs">
-      <DependentUpon>View_Shipping.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="View_Shipping.aspx.designer.cs">
-      <DependentUpon>View_Shipping.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

@@ -8,14 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace Marcustp039823
 {
-    public partial class Profile : System.Web.UI.Page
+    public partial class Cust_View_Shipping : System.Web.UI.Page
     {
         public SqlDataReader sdr;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string email = Session["Email"].ToString();
-            string uid = helper.getUserId(email);
-            String query = $"SELECT * From Customers WHERE CID={uid}";
+            string shipid = Request.QueryString["view"];
+            String query = $"SELECT s.*, pa.Name as depport, pb.Name as arrport FROM Shippings s INNER JOIN Ports pa ON s.Dep_PID=pa.PID " +
+                                $"INNER JOIN Ports pb ON s.Arr_PID=pb.PID WHERE s.ShID={shipid}";
             SqlConnection conn = helper.getConnection();
             conn.Open();
             SqlCommand cm = new SqlCommand(query, conn);

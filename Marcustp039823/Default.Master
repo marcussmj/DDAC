@@ -74,7 +74,9 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav navbar-right">
                                 <%if (userrole == "")
-                                    { %>
+                                    {
+                                        
+                                        %>
                                 <li class=""><a href="Default.aspx">home </a></li>
                                 <%}
                                     else
@@ -165,5 +167,36 @@
     <script src="js/single-map.js"></script>
     <script src="js/map.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        function checkcost() {
+            var departloc = $('#depport').find(":selected").val();
+            var rdepartloc = departloc.split(",");
+            var zdepartloc = rdepartloc[1];
+            var arriveloc = $('#arrport').find(":selected").val();
+            var rarriveloc = arriveloc.split(",");
+            var zarriveloc = rarriveloc[1];
+            var weight = $('#weight').val();
+            var differenceloc = parseFloat(zarriveloc) - parseFloat(zdepartloc);
+            var positiveloc = -differenceloc > 0 ? -differenceloc : differenceloc;
+            var cost = (parseFloat(positiveloc) * parseFloat(weight)) / 250;
+            $('#cost').val(cost);
+
+        }
+
+        function checkduration() {
+            var shipaveragespeed = 37; //37 kilometers / hour
+            var departloc = $('#depport').find(":selected").val();
+            var rdepartloc = departloc.split(",");
+            var zdepartloc = rdepartloc[1];
+            var arriveloc = $('#arrport').find(":selected").val();
+            var rarriveloc = arriveloc.split(",");
+            var zarriveloc = rarriveloc[1];
+            var differenceloc = parseFloat(zarriveloc) - parseFloat(zdepartloc);
+            var positiveloc = -differenceloc > 0 ? -differenceloc : differenceloc;
+            var duration = ((positiveloc / shipaveragespeed) / 6) + 1; // *6 for day basis, +1 to wait for approval
+            $('#duration').val(duration); // time = distance/speed in hour
+        }
+    </script>
 </body>
 </html>

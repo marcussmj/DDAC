@@ -10,6 +10,6 @@
 namespace Marcustp039823 {
     
     
-    public partial class Cust_Add_Shipping {
+    public partial class Cust_View_Shipping {
     }
 }
