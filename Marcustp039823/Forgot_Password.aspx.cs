@@ -21,7 +21,7 @@ namespace Marcustp039823
                 if (checkemail)
                 {
                     string password = helper.getPassword(email);
-                    MailMessage mm = new MailMessage("marcusemail", email);
+                    MailMessage mm = new MailMessage("marcussimmj@gmail.com", email);
                     mm.Subject = "Password Recovery";
                     mm.Body = string.Format("Hi {0},<br /><br />Your password is {1}.<br /><br />Thank You.", email, password);
                     mm.IsBodyHtml = true;
@@ -29,8 +29,8 @@ namespace Marcustp039823
                     smtp.Host = "smtp.gmail.com";
                     smtp.EnableSsl = true;
                     NetworkCredential NetworkCred = new NetworkCredential();
-                    NetworkCred.UserName = "marcusemail";
-                    NetworkCred.Password = "marcuspassword";
+                    NetworkCred.UserName = "marcussimmj@gmail.com";
+                    NetworkCred.Password = "wnn62131798";
                     smtp.UseDefaultCredentials = true;
                     smtp.Credentials = NetworkCred;
                     smtp.Port = 587;
