@@ -37,7 +37,7 @@ namespace Marcustp039823
                     //System.Diagnostics.Debug.WriteLine("-----------"+ "'"+depport+ "','" + arrport + "','" + depportid + "','" + arrportid + "','" + UID + "','" + dateship + "','" + status + "','" + cost + "','" + weight + "','" + details + "','" + duration + "'");
                     String queryaddship = $"INSERT INTO Shippings(Dep_PID,Arr_PID,Customer_ID ,Date_Shipping,Status,Cost,Weight,Details,Duration) VALUES ({depportid},{arrportid},{UID},'{dateship}','{status}','{cost}','{weight}','{details}','{duration}')";
                     helper.executeQuery(queryaddship);
-                    Response.Redirect("Cust_Shippings.aspx");
+                    Response.Redirect("Cust_Home.aspx");
                 }
             }
             else

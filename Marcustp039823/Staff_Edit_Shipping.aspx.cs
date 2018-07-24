@@ -38,11 +38,20 @@ namespace Marcustp039823
                 }
                 string status = "";
                 string conid = "";
+                string queryedit = "";
                 if (Request.QueryString["add"] != null)
                 {
-                    conid = Request.Form["conid"];
-                    status = Request.Form["approval"];
-                    string queryedit = $"UPDATE Shippings SET Status='{status}', Container_ID={conid} WHERE ShID={shipid}";
+                    if (Request.Form["conid"] != null)
+                    {
+                        conid = Request.Form["conid"].ToString();
+                    }
+                    if (Request.Form["approval"] != null)
+                    {
+                        status = Request.Form["approval"].ToString();
+                    }
+                    
+                    
+                    queryedit = $"UPDATE Shippings SET Status='{status}', Container_ID={conid} WHERE ShID={shipid}";
                     if (conid == "")
                     {
                         queryedit = $"UPDATE Shippings SET Status='{status}' WHERE ShID={shipid}";

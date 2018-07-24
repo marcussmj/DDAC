@@ -71,6 +71,7 @@
                                             <%} %>
                                             <%if (sdr["Status"].ToString() == "Arriving")
                                                 { %>
+                                            <option disabled>arriving</option> 
                                             <%} %>
                                             <%}
                                                 else
@@ -78,6 +79,10 @@
                                             <%if (sdr["Status"].ToString() == "Arriving")
                                                 { %>
                                             <option value="Received">Received</option>
+                                            <%} %>
+                                            <%if (sdr["Status"].ToString() == "Pending")
+                                                { %>
+                                            <option disabled>Waiting for departure approval</option>
                                             <%} %>
                                             <%} %>
                                         </select>
